@@ -1,15 +1,19 @@
 <?php
 
-class Products {
+class Products extends Controller{
 
     function __construct(){
-        echo '<h1>Hey im controller</h1>';
+        
+        parent::__construct();
+        $this->view->render('products/index');
     }
 
+       public function addProduct(){
+            
+            echo 'hey im add';
 
-    public function test(){
-        echo 'hey im test';
-    }
+            $this->model->insert();
+       }
     
 }
 

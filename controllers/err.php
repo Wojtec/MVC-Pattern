@@ -1,11 +1,13 @@
 <?php
+require_once 'libs/controller.php';
 
-class Aaa{
+class Err extends Controller{
 
     function __construct(){
-        echo "<p> Resource load failed</p>";
+        parent::__construct();
+        $this->view->message = "Fatal error";
+        $this->view->render('error/index');
     }
-
 }
 
 ?>
