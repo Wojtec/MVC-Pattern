@@ -1,5 +1,7 @@
 <?php
+
 require_once 'controllers/err.php';
+
 class App {
 
     function __construct(){
@@ -15,6 +17,7 @@ class App {
             require_once $fileController;
             $controller = new Products();
             $controller->loadModel('products');
+            $controller->render();
             return false;
 
         }
@@ -30,6 +33,8 @@ class App {
                 if(isset($url[1])){
                     $controller->{$url[1]}();
 
+                }else{
+                    $controller->render();
                 }
         }else
         {

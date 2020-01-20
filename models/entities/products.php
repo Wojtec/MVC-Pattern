@@ -1,12 +1,12 @@
 <?php
 
-class Products {
+class Product {
 
     public $product_id;
     public $product_name;
     public $category_id;
-    public $publish_date;
-
+    public $date_publish;
+    public $category_name;
 }
 
 

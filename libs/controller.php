@@ -9,7 +9,6 @@ class Controller{
     }
 
         function loadModel($model){
-            var_dump($model);
             $url = 'models/' . $model . 'model.php';
 
             if(file_exists($url)){

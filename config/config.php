@@ -1,6 +1,6 @@
 <?php 
 
-define('URL', 'http://localhost/MVC-Pattern/');
+define('URL', 'http://localhost/MVC-Pattern');
 
 define('HOST', 'localhost');
 define('DB', 'MVC');

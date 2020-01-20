@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 15, 2020 at 11:37 PM
+-- Generation Time: Jan 20, 2020 at 10:47 PM
 -- Server version: 5.7.29
 -- PHP Version: 7.3.12-1
 
@@ -38,7 +38,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
-(6, 'friutis');
+(1, 'Fruits'),
+(7, 'Vegetables');
 
 -- --------------------------------------------------------
 
@@ -48,7 +49,7 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 
 CREATE TABLE `products` (
   `product_id` int(11) NOT NULL,
-  `category_id` int(11) DEFAULT NULL,
+  `category_id` int(11) NOT NULL,
   `date_publish` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `product_name` varchar(200) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -58,8 +59,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `category_id`, `date_publish`, `product_name`) VALUES
-(2, NULL, '2020-01-15 23:19:03', 'orange'),
-(3, NULL, '2020-01-15 23:34:19', 'apple');
+(12, 1, '2020-01-20 22:22:00', 'manzana'),
+(13, 7, '2020-01-20 22:25:18', 'patata'),
+(16, 1, '2020-01-20 22:39:48', 'kiwi');
 
 --
 -- Indexes for dumped tables
@@ -76,7 +78,8 @@ ALTER TABLE `category`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
-  ADD KEY `category_id` (`category_id`);
+  ADD UNIQUE KEY `product_name` (`product_name`),
+  ADD KEY `products_ibfk_1` (`category_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -86,13 +89,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables

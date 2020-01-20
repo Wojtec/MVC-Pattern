@@ -3,21 +3,29 @@
 class Products extends Controller{
 
     function __construct(){
-        
         parent::__construct();
-        $this->view->render('products/index');
+        $this->view->test = [];
+       
     }
+       public function render(){
+            $category =  $this->model->getCategory();
+            $this->view->test = $category;
+            $this->view->render('products/index');
+        } 
 
        public function addProduct(){
-            
-            echo 'hey im add';
+        $product = $_POST['products'];
+        $category = $_POST['category'];
 
-            $this->model->insert();
-       }
-    
+        $this->model->insert(['products' => $product],['category_id' => $category]);
+      
+        }
+
+   
+       public function showCategory(){
+
+            $this->model->getCategory();
+        }
 }
-
-
-
 
 ?>

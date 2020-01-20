@@ -6,8 +6,14 @@ class Err extends Controller{
     function __construct(){
         parent::__construct();
         $this->view->message = "Fatal error";
-        $this->view->render('error/index');
+        
     }
+    
+    public function render(){
+
+        $this->view->render('error/index');
+
+   } 
 }
 
 ?>
