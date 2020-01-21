@@ -11,7 +11,6 @@ class ProductsModel extends Model{
     }
 
         public function insert($product,$category_id){
-            var_dump($category_id);
             try{
              
                 $query = $this->db->connect()->prepare('INSERT INTO products (product_name, category_id) VALUES (:products, :category_id)');

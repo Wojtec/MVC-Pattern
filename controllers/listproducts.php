@@ -7,16 +7,13 @@ class ListProducts extends Controller{
         
     }
     public function render(){
-
-        $this->view->render('category/index');
+        $products = $this->model->getProducts();
+        $this->view->products = $products;
+        $this->view->render('listproducts/index');
 
    } 
 
-   public function showProducts(){
-          
-    $this->model->getProducts();
-
-}
+  
 }
 
 

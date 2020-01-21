@@ -4,12 +4,12 @@ class Products extends Controller{
 
     function __construct(){
         parent::__construct();
-        $this->view->test = [];
+        $this->view->category = [];
        
     }
        public function render(){
             $category =  $this->model->getCategory();
-            $this->view->test = $category;
+            $this->view->category = $category;
             $this->view->render('products/index');
         } 
 

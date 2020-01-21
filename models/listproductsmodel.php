@@ -6,7 +6,6 @@ include_once 'models/entities/listproducts.php';
 class listProductsModel extends Model{
 
     public function __construct(){
-
         parent::__construct();
     }
     
@@ -24,7 +23,6 @@ class listProductsModel extends Model{
                 $product->category_name = $row['category_name'];
                 array_push($products,$product);
             }
-            var_dump($products);
 
             return $products;
             }catch(PDOException $e){

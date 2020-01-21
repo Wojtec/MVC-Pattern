@@ -16,7 +16,7 @@ class Controller{
                 require $url;
 
                 $modelName = $model. 'Model';
-                $this->model = new $modelName;
+                $this->model = new $modelName();
             }
 
         }
