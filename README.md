@@ -2,7 +2,8 @@
 
 Requirements
 
-First Stage - Research:
+<b>Phase I </b>
+Research:
 - What is an architecture pattern?
 - What is the MVC pattern?
 - Draw a scheme that clearly depicts what the MVC pattern is.
@@ -10,7 +11,8 @@ First Stage - Research:
 - Describe the steps of a request from its creation to its response using this pattern.
 - Advantages of MVC.
 
-Second stage - Development:
+<b>Phase II</b> 
+- Development:
 - Implement the MVC pattern using PHP without any library
 - Use a clear directory structure. You must have a minimum of:
 - 2 controllers
@@ -20,7 +22,7 @@ Second stage - Development:
 -> URL parameters
 -> mod_rewrite (you have to take into account that this option requires the use of the “.htaccess” file
 
-Important
+<b>Important</b>
 - Design is not valued
 - Topic is not taken into account
 - Order and organisation of files and directories is valued
@@ -42,12 +44,12 @@ Important
 - Documentation about the tools used in the project 
 - Record of lessons learnt.
 
-Delivery
+<b>Delivery</b>
 - This repo
 - PDF document including the theoretical documentation.
 
-Resources
+<b>Resources</b>
 - README Guidelines Example
 
 Author
-Wojtek 
+<b>Wojtek</b> 
