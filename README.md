@@ -3,7 +3,7 @@
 Requirements
 
 <b>Phase I </b>
-- Research
+# Research
 - What is an architecture pattern?
 - What is the MVC pattern?
 - Draw a scheme that clearly depicts what the MVC pattern is.
@@ -12,7 +12,7 @@ Requirements
 - Advantages of MVC.
 
 <b>Phase II</b> 
-- Development
+# Development
 - Implement the MVC pattern using PHP without any library
 - Use a clear directory structure. You must have a minimum of:
 - 2 controllers
